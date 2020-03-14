@@ -34,9 +34,10 @@ namespace IdentityDemo.APIGateway
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors("AllowAll");
             app.UseRouting();
             app.UseOcelot();
-            app.UseCors("AllowAll");
+            
 
             app.UseEndpoints(endpoints =>
             {

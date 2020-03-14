@@ -19,7 +19,16 @@
     </ul>
     <form class="form-inline my-2 my-md-0">
       <ul class="navbar-nav mr-auto">
-        <a class="nav-link" href="javascript:void(0)">登录</a>
+        <a *ngIf="!isAuthenticated" class="nav-link" href="javascript:void(0)" (click)="onLogin()">登录</a>
+        <li *ngIf="isAuthenticated" class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            {{userName}}
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="javascript:void(0)" (click)="onLogOut()">注销</a>
+          </div>
+        </li>
       </ul>
     </form>
   </div>

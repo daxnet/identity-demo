@@ -1,1 +1,20 @@
-<p>api works!</p>
+<div class="container" *ngIf="data">
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Summary</th>
+            <th scope="col">TempF</th>
+            <th scope="col">TempC</th>
+            <th scope="col">Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let d of data">
+            <td>{{d.summary}}</td>
+            <td>{{d.temperatureF}}</td>
+            <td>{{d.temperatureC}}</td>
+            <td>{{d.date}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
