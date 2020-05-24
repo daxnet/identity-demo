@@ -31,7 +31,8 @@ namespace IdentityDemo.IdentityService
                         ClaimTypes.NameIdentifier,
                         ClaimTypes.Name,
                         ClaimTypes.Email,
-                        ClaimTypes.Role
+                        ClaimTypes.Role,
+                        "Role"
                     }
                 }
             };

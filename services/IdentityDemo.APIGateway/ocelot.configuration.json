@@ -15,6 +15,9 @@
         "AuthenticationProviderKey": "AuthKey",
         "AllowedScopes": []
       }
+      //"RouteClaimsRequirement": {
+      //  "Role": "superadmin"
+      //}
     }
   ]
 }

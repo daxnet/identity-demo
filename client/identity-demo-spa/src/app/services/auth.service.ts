@@ -42,7 +42,12 @@ export class AuthService {
   }
 
   get authorizationHeaderValue(): string {
-    return `${this.user.token_type} ${this.user.access_token}`;
+    if (this.user != null) {
+      console.log(this.user.access_token);
+      return `${this.user.token_type} ${this.user.access_token}`;
+    }
+
+    return '';
   }
 
   private getUserManagerSettings(): UserManagerSettings {

@@ -90,6 +90,7 @@ namespace IdentityDemo.IdentityService
                 }
 
                 await _userManager.AddClaimAsync(user, new Claim(ClaimTypes.Role, string.Join(',', validRoleNames)));
+                await _userManager.AddClaimAsync(user, new Claim("Role", string.Join(',', validRoleNames)));
             }
 
             return Ok(new RegisterUserResponseViewModel(user));
